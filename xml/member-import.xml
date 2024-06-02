@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE members-upload [
+    <!ELEMENT members-upload (members)>
+    <!ATTLIST members-upload operation (insert|update) "insert">
+    <!ELEMENT members (member+)>
+    <!ELEMENT member (id?, first_name, last_name, email, password, phone, role)>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT first_name (#PCDATA)>
+    <!ELEMENT last_name (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT password (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+    <!ELEMENT role (#PCDATA)>
+]>
+<!-- Example of Insert -->
+<members-upload operation="insert">
+    <members>
+        <member>
+            <first_name>Dylan</first_name>
+            <last_name>Lind</last_name>
+            <email>dylanlind@email.com</email>
+            <password>abc123</password>
+            <phone>0423 832 321</phone>
+            <role>member</role>
+        </member>
+    </members>
+</members-upload>
+
+<!-- Example of Update -->
+<!-- <members-upload operation="update">
+    <members>
+        <member>
+            <id>3</id>
+            <first_name>John</first_name>
+            <last_name>Smith</last_name>
+            <email>johnsmith@gmail.com</email>
+            <password>abc123</password>
+            <phone>0412 546 789</phone>
+            <role>member</role>
+        </member>
+    </members>
+</members-upload> -->

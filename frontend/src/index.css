@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #e63946;
+  --primary-dark: #b52b36;
+}
+
+@layer components {
+  .max-container {
+    width: 390px;
+    min-height: 844px;
+    max-height: 844px;
+    border-radius: 19px;
+    background-color: #fff;
+    box-shadow: 0 0 2px 0 rgba(15, 15, 15, 0.28);
+    position: relative;
+  }
+  .centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .max-modal {
+    max-width: 390px;
+    max-height: 844px;
+    position: relative;
+    margin: 0 auto;
+    border: 2px solid black;
+  }
+}
+
+@layer utilities {
+  .btn-primary {
+    @apply bg-[var(--primary)] text-white px-4 py-2 rounded;
+    outline: none;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  .btn-primary:focus {
+    @apply ring-2 ring-[var(--primary)];
+  }
+  .btn-primary:hover {
+    @apply bg-[var(--primary-dark)];
+  }
+
+  .btn-secondary {
+    @apply bg-white text-primary px-4 py-2 rounded border-2 border-[var(--primary)];
+    outline: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  .btn-secondary:focus {
+    @apply ring-2 ring-[var(--primary)];
+  }
+  .btn-secondary:hover {
+    @apply bg-[#f5f5f5] border-[var(--primary)];
+  }
+
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .file-input-primary {
+    @apply bg-white text-black px-4 py-2 rounded border-2 border-black;
+    transition: border-color 0.3s, color 0.3s;
+  }
+
+  .file-input-primary:focus {
+    @apply border-2 border-black;
+  }
+
+  .select-primary {
+    @apply bg-white text-black px-4 py-2 rounded border-2 border-black;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@high-street-gym-app",
+  "description": "High Street Gym Fullstack Web Application",
+  "version": "1.0.0",
+  "author": "Dylan Lindsay",
+  "license": "ISC",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "frontend": "npm run -w frontend dev",
+    "backend": "npm run -w backend start"
+  }
+}
+ 
