@@ -14,25 +14,25 @@
 <timetable-upload operation="insert">
     <timetables>
         <timetable>
-            <datetime>2024-05-27 11:30:00</datetime>
+            <datetime>2024-06-04 11:30:00</datetime>
             <activity_id>12</activity_id>
             <location_id>1</location_id>
             <trainer_id>5</trainer_id>
         </timetable>
         <timetable>
-            <datetime>2024-05-28 6:00:00</datetime>
+            <datetime>2024-06-05 6:00:00</datetime>
             <activity_id>9</activity_id>
             <location_id>2</location_id>
             <trainer_id>4</trainer_id>
         </timetable>
         <timetable>
-            <datetime>2024-05-29 10:00:00</datetime>
+            <datetime>2024-06-06 10:00:00</datetime>
             <activity_id>11</activity_id>
             <location_id>1</location_id>
             <trainer_id>5</trainer_id>
         </timetable>
         <timetable>
-            <datetime>2024-05-30 9:30:00</datetime>
+            <datetime>2024-06-07 9:30:00</datetime>
             <activity_id>7</activity_id>
             <location_id>2</location_id>
             <trainer_id>4</trainer_id>
