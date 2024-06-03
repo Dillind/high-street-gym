@@ -217,11 +217,11 @@ const BlogPage = () => {
           </div>
         </dialog>
       </section>
-      <section className="pb-5 max-h-[70vh] overflow-auto">
+      <section className="pb-[3.5rem] max-h-[75vh] overflow-y-auto">
         {loading ? (
           <span className="loading loading-spinner loading-md"></span>
         ) : (
-          <div className="">
+          <div>
             {blogPosts && blogPosts.length > 0 ? (
               blogPosts.map((blogPost) => (
                 <article
