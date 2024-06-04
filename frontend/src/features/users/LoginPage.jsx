@@ -47,7 +47,7 @@ const LoginPage = () => {
       <section className="w-full p-5 m-auto">
         <h1
           className="text-[33px] font-palanquin font-semibold text-center uppercase 
-        tracking-normal"
+        tracking-normal mb-5"
         >
           Login
         </h1>
