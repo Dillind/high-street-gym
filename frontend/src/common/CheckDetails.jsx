@@ -38,12 +38,12 @@ const CheckDetails = ({ name, endpoint }) => {
   return (
     <div>
       <button
-        className="mb-2 btn font-montserrat"
+        className="mb-2 btn btn-secondary font-montserrat"
         onClick={() => document.getElementById(modalId).showModal()}
       >
         {name}
       </button>
-      <dialog id={modalId} className="modal">
+      <dialog id={modalId} className="modal max-modal">
         <div className="modal-box">
           <h2 className="mb-2 text-2xl font-bold text-center font-palanquin">
             {name}
