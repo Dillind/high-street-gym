@@ -110,7 +110,8 @@ const XMLUploadPage = ({ onUploadSuccess, disabled = false }) => {
                 name="import-type"
                 value={importType}
                 onChange={handleImportType}
-                className="w-full select select-bordered select-primary"
+                className="w-full select select-bordered select-ghost border-black border-2 
+                font-montserrat"
               >
                 <option value="" disabled>
                   Select Import Type
@@ -123,7 +124,7 @@ const XMLUploadPage = ({ onUploadSuccess, disabled = false }) => {
                 id="file-input"
                 ref={uploadInputRef}
                 disabled={disabled}
-                className="file-input file-input-bordered file-input-primary"
+                className="file-input border-black border-2 font-montserrat"
               />
               <div className="flex items-center justify-center gap-2 mt-2">
                 <button

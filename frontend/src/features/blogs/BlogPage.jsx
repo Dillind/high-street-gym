@@ -151,7 +151,7 @@ const BlogPage = () => {
         >
           <span className="font-montserrat">Create Post</span>
         </button>
-        <dialog id="modal" className="modal">
+        <dialog id="modal" className="modal max-modal">
           <div className="modal-box">
             <h2 className="text-2xl font-bold text-center font-palanquin">
               Create Post
