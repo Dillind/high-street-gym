@@ -114,7 +114,7 @@ const ClassesPage = () => {
       ) : (
         <></>
       )}
-      <section className="pb-5 max-h-[75vh] overflow-auto">
+      <section className="pb-[3.5rem] max-h-[75vh] overflow-y-auto">
         {loading ? (
           <span className="loading loading-spinner loading-md"></span>
         ) : (
@@ -122,7 +122,7 @@ const ClassesPage = () => {
             {gymClasses && gymClasses.length > 0 ? (
               gymClasses.map((gymClass) => (
                 <article
-                  className="p-4 mb-5 border-2 border-black rounded-md"
+                  className="p-4 mb-5 border-2 border-black rounded-md mx-3"
                   key={gymClass.class_id}
                 >
                   <div>
@@ -131,7 +131,7 @@ const ClassesPage = () => {
                         Class Details:
                       </h4>
                       <button
-                        className="btn font-montserrat"
+                        className="btn font-montserrat btn-secondary"
                         onClick={() =>
                           document
                             .getElementById(
@@ -144,9 +144,9 @@ const ClassesPage = () => {
                       </button>
                       <dialog
                         id={`modal-delete-class-${gymClass.class_id}`}
-                        className="modal max-container"
+                        className="modal max-modal"
                       >
-                        <div className="modal-box">
+                        <div className="modal-box max-modal">
                           <h3 className="text-lg font-medium text-center font-palanquin">
                             Are you sure you want to delete the gym class?
                           </h3>

@@ -145,7 +145,7 @@ const BookingsPage = () => {
                       id={`modal-delete-booking-${booking.booking_id}`}
                       className="modal"
                     >
-                      <div className="modal-box">
+                      <div className="modal-box max-modal">
                         <h3 className="text-lg font-medium text-center font-palanquin">
                           Are you sure you want to delete the booking?
                         </h3>
