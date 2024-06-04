@@ -88,11 +88,11 @@ const RegistrationPage = () => {
   return (
     <main className="max-container centered-container">
       <NavBar />
-      <section className="w-full p-5 m-auto">
-        <h1 className="text-[33px] font-palanquin font-semibold text-center uppercase mb-5">
+      <section className="w-full p-3">
+        <h1 className="text-[33px] font-palanquin font-semibold text-center uppercase mb-2">
           Registration
         </h1>
-        <form className="space-y-5" onSubmit={onRegisterSubmit}>
+        <form className="space-y-2" onSubmit={onRegisterSubmit}>
           <div>
             {/* First Name */}
             <label htmlFor="first-name" className="label font-montserrat">
@@ -187,9 +187,8 @@ const RegistrationPage = () => {
               {statusMessage}
             </span>
           </div>
-
           <div className="text-center">
-            <span className="text-sm  font-montserrat">
+            <span className="text-sm font-montserrat">
               Already have an account?
             </span>
             <span
