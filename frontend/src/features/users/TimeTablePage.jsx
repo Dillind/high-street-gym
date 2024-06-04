@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 const TimeTablePage = () => {
   const [gymClasses, setGymClasses] = useState([]);
+  const [expandedIndex, setExpandedIndex] = useState(-1);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -68,6 +69,14 @@ const TimeTablePage = () => {
     );
   };
 
+  const handleClick = (newIndex) => {
+    if (expandedIndex === newIndex) {
+      setExpandedIndex(-1);
+    } else {
+      setExpandedIndex(newIndex);
+    }
+  };
+
   return (
     <main className="max-container">
       <MemberNavBar />
@@ -84,52 +93,57 @@ const TimeTablePage = () => {
       </div>
       <section className="mb-10 max-h-[600px] overflow-auto p-3">
         {gymClasses && gymClasses.length > 0 ? (
-          Object.entries(groupedGymClasses).map(([dayOfWeek, gymClasses]) => (
-            <div
-              key={dayOfWeek}
-              className="mb-3 border-2 collapse collapse-arrow border-black"
-            >
-              <input type="radio" name="my-accordion-2" />
-              <div className="text-xl font-medium collapse-title font-palanquin">
-                {dayOfWeek}
-              </div>
-              <div className="collapse-content">
-                {gymClasses
-                  .reduce((uniqueClasses, gymClass) => {
-                    if (
-                      !uniqueClasses.some(
-                        (uniqueClass) =>
-                          uniqueClass.activity_name === gymClass.activity_name
-                      )
-                    ) {
-                      uniqueClasses.push(gymClass);
-                    }
-                    return uniqueClasses;
-                  }, [])
-                  .map((gymClass) => (
-                    <div
-                      key={gymClass.class_id}
-                      className="flex items-center justify-between mb-3"
-                    >
-                      <p className="font-montserrat">
-                        {gymClass.activity_name}
-                      </p>
-                      <button
-                        className="btn font-montserrat btn-primary"
-                        onClick={() =>
-                          handleGymClassBooking(
-                            gymClass.activity_id,
-                            gymClass.class_datetime
-                          )
-                        }
+          Object.entries(groupedGymClasses).map(
+            ([dayOfWeek, gymClasses], index) => (
+              <div
+                key={dayOfWeek}
+                className={`mb-3 border-2 collapse collapse-arrow border-black ${
+                  expandedIndex === index ? "collapse-open" : "collapse-close"
+                }`}
+                onClick={() => handleClick(index)}
+              >
+                <input type="radio" name="my-accordion-2" />
+                <div className="text-xl font-medium collapse-title font-palanquin">
+                  {dayOfWeek}
+                </div>
+                <div className="collapse-content">
+                  {gymClasses
+                    .reduce((uniqueClasses, gymClass) => {
+                      if (
+                        !uniqueClasses.some(
+                          (uniqueClass) =>
+                            uniqueClass.activity_name === gymClass.activity_name
+                        )
+                      ) {
+                        uniqueClasses.push(gymClass);
+                      }
+                      return uniqueClasses;
+                    }, [])
+                    .map((gymClass) => (
+                      <div
+                        key={gymClass.class_id}
+                        className="flex items-center justify-between mb-3"
                       >
-                        Book
-                      </button>
-                    </div>
-                  ))}
+                        <p className="font-montserrat">
+                          {gymClass.activity_name}
+                        </p>
+                        <button
+                          className="btn font-montserrat btn-primary"
+                          onClick={() =>
+                            handleGymClassBooking(
+                              gymClass.activity_id,
+                              gymClass.class_datetime
+                            )
+                          }
+                        >
+                          Book
+                        </button>
+                      </div>
+                    ))}
+                </div>
               </div>
-            </div>
-          ))
+            )
+          )
         ) : (
           <div className="flex flex-col items-center justify-center flex-grow mt-5">
             <h3 className="my-2 text-lg font-semibold tracking-normal text-center uppercase font-montserrat">
