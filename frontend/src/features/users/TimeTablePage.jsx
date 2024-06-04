@@ -102,7 +102,11 @@ const TimeTablePage = () => {
                 }`}
                 onClick={() => handleClick(index)}
               >
-                <input type="radio" name="my-accordion-2" />
+                <input
+                  type="radio"
+                  name="my-accordion-2"
+                  className="cursor-pointer"
+                />
                 <div className="text-xl font-medium collapse-title font-palanquin">
                   {dayOfWeek}
                 </div>
