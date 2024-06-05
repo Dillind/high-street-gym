@@ -38,6 +38,10 @@ In this project, there are many technologies and libraries used in both the fron
 
 - [xml2js](https://www.npmjs.com/package/xml2js): A library for parsing XML data.
 
+### Database
+
+- [MySQL](https://www.mysql.com/): A robust relational database management system used for storing and managing application data.
+
 ## Getting Started
 
 To get started with the **High Street Gym Web Application**, follow the steps outlined below:
