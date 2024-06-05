@@ -4,7 +4,7 @@
 
 ## Project Overview and Purpose
 
-The **High Street Gym Web Application** is a full-stack web application developed for High Street Gym, providing a dynamic website and database to manage class bookings for a variety of activities offered by the gym.
+The **High Street Gym Web Application** is a full-stack mobile web application developed for High Street Gym, providing a dynamic website and database to manage class bookings for a variety of activities offered by the gym.
 
 ## Technologies Used
 
